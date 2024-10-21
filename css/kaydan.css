@@ -2,7 +2,7 @@
     font-family: Arial, Helvetica, sans-serif;
     padding: 25px;
     box-shadow: 0px 0px 16px 0px black;    
-    background-color:  #D0D9CD;  
+    background-color:   #0b0c0a;  
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto; 
@@ -34,7 +34,7 @@
     font-size: 30px;
     align-self: center;
     text-align: center;
-    color: #78866B;
+    color:  #0b0c0a;
     padding-bottom: 5px;
 
 }
@@ -67,7 +67,7 @@
 }
 
 .buttons{
-    background-color: #A9BA9D;
+    background-color: #0b0c0a;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -100,7 +100,7 @@
 
 .button{
     margin-top: 100px;
-    background-color: #A9BA9D;
+    background-color:  #0b0c0a;
     border: none;
     color: white;
     padding: 15px 32px;
