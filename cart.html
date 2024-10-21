@@ -28,132 +28,252 @@
         </div>
     </nav>
 
-    <div class="container">
-        <h1>Enroll</h1>
-        <form action="" method="">
-            <h3 class="formHeader">Your Details</h3>
-            <div class="formSection">
-                <label for="Location">Location:</label>
-                <select name="Location" id="Location">
-                    <option value="empty">.....</option>
-                    <option value="DB">Durban</option>
-                    <option value="JB">Johannesburg</option>
-                    <option value="CT">Chatsworth</option>
-                </select>
-            </div>
-            <div class="formSection">
-                <label for="yourName">Full Name:</label>
-                <input type="text" id="yourName" class="block" placeholder="Enter your name" required>
-            </div>
-            <div class="formSection">
-                <label for="yourEmail">Email:</label>
-                <input type="email" id="yourEmail" class="block" placeholder="Enter your email" required>
-            </div>
-            <div class="formSection">
-                <label for="yourAge">Age:</label>
-                <input type="number" id="yourAge" class="block" placeholder="Enter your age" required>
-            </div>
-            <div class="formSection">
-                <label for="yourCell">Contact Number:</label>
-                <input type="tel" id="yourCell" class="block" placeholder="Enter your contact number" required>
-            </div>
+    <nav class= "nav-left"></nav>
+        
+</header>
+<div id="wrapper">
+   
 
-            <h3 class="formHeader">Select Courses</h3>
-            <div class="courseList">
-                <label><input type="checkbox" id="childMinding"> Child-Minding: R750</label>
-                <label><input type="checkbox" id="gardenMaintenance"> Garden Maintenance: R750</label>
-                <label><input type="checkbox" id="cooking"> Cooking: R750</label>
-                <label><input type="checkbox" id="firstAid"> First-Aid: R1500</label>
-                <label><input type="checkbox" id="landscaping"> Landscaping: R1500</label>
-                <label><input type="checkbox" id="lifeSkills"> Life Skills: R1500</label>
-                <label><input type="checkbox" id="sewing"> Sewing: R1500</label>
-            </div>
+    <main>
+        <style>
+            table, th, td {
+                border: 2px solid black;
+                border-collapse: collapse;
+                padding: 15px;
+            }
+        </style>
+        <table>
+            <tr>
+                <td>
 
-            <div id="formButtons">
-                <input type="reset" value="Clear Form" class="buttons">
-                <input type="button" value="Calculate Bill" class="buttons" onclick="calcDiscount()">
-            </div>
-
-            <h3>Billing Information</h3>
-            <div id="billInfo">
-                <p><strong>Amount:</strong> <span id="billDisplay">R0</span></p>
-                <p><strong>Discount:</strong> <span id="discountDisplay">R0</span></p>
-                <p><strong>VAT:</strong> <span id="vatDisplay">R0</span></p>
-                <p><strong>Total:</strong> <span id="totalDisplay">R0</span></p>
-            </div>
-
-            <div id="discountInfo">
-                <h3>Discounts</h3>
-                <p>Empower the Nation offers a 5% discount on orders of 2 courses, 10% on 3 courses, and 15% on orders of more than 3 courses.</p>
-            </div>
-
-            <div id="submitButton">
-                <input type="submit" value="Submit Form" class="button" onclick="validateForm()">
-            </div>
-        </form>
-    </div>
-
-    <footer>
-        <div class="social">
-            <a href=""><img src="images/Web_Icons/instagram.png" alt="instagram"></a>
-            <a href=""><img src="images/Web_Icons/facebook.png" alt="facebook"></a>
-            <a href=""><img src="images/Web_Icons/youtube.png" alt="youtube"></a>
+        <div class="container" >
+         <h1>Enroll</h1>
         </div>
-        <p>&copy; <span id="currentYear"></span> - EPMN - 2024</p>
-    </footer>
 
-    <script>
-        document.getElementById('currentYear').innerText = new Date().getFullYear();
+            <div id="Applysheet_main">
+                <div id="HTMLform">
+    
+                    <form action="" method="">
+                        
 
-        function calcDiscount() {
-            var coursesCount = 0;
-            var bill = 0;
+                        <h3 class="formHeader">Your Details</h3>
+                            <table id="UserDetails">
+                                    
+                                <tr>
+                                    <td class="lable">Location:</td>
+                                    <td>
+                                    <select name="Loaction" id="Location">
+                                        <option value="empty">.....</option>
+                                        <option value="DB">Durban</option>
+                                        <option value="JB">Johannesburgh</option>
+                                        <option value="CT">Chatsworth</option>
+                                    </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="lable">Full Name:</td>
+                                    <td><input type="text" value="" id="yourName"  class="block" onclick="this.value=''"></td>
 
-            if (childMinding.checked) { coursesCount++; bill += 750; }
-            if (gardenMaintenance.checked) { coursesCount++; bill += 750; }
-            if (cooking.checked) { coursesCount++; bill += 750; }
-            if (firstAid.checked) { coursesCount++; bill += 1500; }
-            if (landscaping.checked) { coursesCount++; bill += 1500; }
-            if (lifeSkills.checked) { coursesCount++; bill += 1500; }
-            if (sewing.checked) { coursesCount++; bill += 1500; }
-            if (coursesCount === 0) { alert("Please Select A Course"); return; }
+                                </tr>
+                                <tr>
+                                    <td class="lable">Email:</td>
+                                    <td><input type="email" value="" id="yourEmail"  class="block" onclick="this.value=''"></td>
+                                </tr>
+                                <tr>
+                                    <td class="lable">Age:</td>
+                                    <td><input type="text" value="" id="yourAge"  class="block" onclick="this.value=''"></td>
+                                </tr>
+                                <tr>
+                                    <td class="lable">Contact Number:</td>
+                                    <td><input type="text" value="" id="yourCell"  class="block" onclick="this.value=''"></td>
+                                </tr>
+                            </table>
+                            
+                                
+                            <h3 class="formHeader">Six Week Courses</h3>
+                            <table class="courseList1">
+                                
+                                <tr>
+                                    <td> <input type="checkbox" id="childMinding"> Child-Minding: R750</td>
+                                    <td> <input type="checkbox" id="gardenMaintenace">Garden Maintenace: R750 </td>
+                                    <td> <input type="checkbox" id="cooking">Cooking: R750 </td>
+                                </tr>
+                                
+                            </table>
 
-            var discount = (coursesCount === 2) ? 0.05 : (coursesCount === 3) ? 0.10 : (coursesCount > 3) ? 0.15 : 0;
-            var discountApplied = bill * discount;
-            var totalAD = bill - discountApplied;
-            var vat = bill * 0.15;
+                            <h3 class="formHeader">Six Month Courses</h3>
+                            <table class="courseList2">
 
-            document.getElementById("billDisplay").innerText = "R" + bill;
-            document.getElementById("discountDisplay").innerText = "R" + discountApplied;
-            document.getElementById("totalDisplay").innerText = "R" + totalAD;
-            document.getElementById("vatDisplay").innerText = "R" + vat;
-        };
+                                <tr>
+                                    <td> <input type="checkbox" id="firstAid">First-Aid: R1500 </td>
+                                    <td> <input type="checkbox" id="landscaping">Landscaping: R1500 </td>
+                                    <td> <input type="checkbox" id="lifeSkills">Life Skills: R1500 </td>
+                                    <td> <input type="checkbox" id="sewing">Sewing: R1500 </td>
+                                </tr>
+                                
+                            </table>
 
-        function validateForm() {
-            var validateName = document.getElementById("yourName").value;
-            if (validateName.trim() === "") {
-                alert("Please Enter Your Name");
-                return;
-            }
+                    <table id="formButtons">
+                        <tr>
+                            <td><input type="reset" value="Clear Form" class="buttons"></td>
+                            <td><input type="button" value="Calculate Bill" class="buttons" onclick="calcDiscount()"></td>
+                        </tr>
+                    </table>
+                   
+                    <table id="billInfo">
+                        
+                        <tr>
+                            <td class="billLable">Amount:</td>
+                            <td id="billDisplay">0</td>
+                        </tr>
 
-            var validateEmail = document.getElementById("yourEmail").value;
-            if (!validateEmail.includes("@") || !validateEmail.includes(".")) {
-                alert("Not a valid email format");
-                return;
-            }
+                        <tr>
+                            <td class="billLable">Discount:</td>
+                            <td id="discountDisplay">0</td>
+                        </tr>
 
-            var validateAge = document.getElementById("yourAge").value;
-            if (validateAge < 16) {
-                alert("You are not over 16. You will need parental consent to book a service");
-                return;
-            }
+                        <tr>
+                            <td class="billLable">Vat:</td>
+                            <td id="vatDisplay">0</td>
+                        </tr>
+                        <tr>
+                            <td class="billLable">Total:</td>
+                            <td id="totalDisplay">0</td>
+                        </tr>
 
-            var validateCell = document.getElementById("yourCell").value;
-            if (!validateCell.includes(" ") && !validateCell.includes("-")) {
-                alert("This is not a valid Cell Number");
-                return;
-            }
-        }
-    </script>
+                    </table>
+
+                        <div id="discountInfo">
+                            <h3>Dicounts</h3>
+                            <p> Empower the Nation offers a 5% discount on orders of 2 courses.
+                            A 10% discount on orders of 3 courses.
+                            And 15% dicount on orders of more then 3 courses.</p>
+                        </div>
+
+                    <table id="submitButton">
+                        <tr><td><input type="submit" id="submitButton" value="Submit Form" class="button" onclick="validateForm()"></td></tr>
+                    </table>
+
+                </form>
+                   
+                </div> 
+                    
+            </div>
+                    
+        </div>
+    </main>
+</div>
+</center>
 </body>
+<footer>
+<div class="social">
+    <a href=""><img src="Images/instagram.png" alt="instagram - Link" title="instagram - Link" ></a>
+    <a href=""><img src="Images/facebook.png" alt="facebook - Link" title="facebook - Link" ></a>
+    <a href=""><img src="Images/youtube.png" alt="youtube - Link" title="youtube - Link" ></a>
+</div>
+    <p>
+    <script class="copy">
+        var theDate=new Date()
+        document.write("&copy; " + theDate.getFullYear())
+        document.write(" - EPMN - 2024  ")
+    </script>
+    </p>
+   
+
+</footer>
+
+
+<script>
+
+
+function calcDiscount(){
+  
+    var coursesCount = 0;
+    var bill = 0
+
+
+    if(childMinding.checked == 1){
+         coursesCount += 1;
+         bill += 750;
+     }
+     if(gardenMaintenace.checked == 1){
+         coursesCount = coursesCount + 1;
+         bill = bill + 750;
+     }
+     if(cooking.checked == 1){
+         coursesCount = coursesCount + 1;
+         bill = bill + 750;
+     }
+     if(firstAid.checked == 1){
+         coursesCount = coursesCount + 1;
+         bill = bill + 1500;
+     }
+     if(landscaping.checked == 1){
+         coursesCount = coursesCount + 1;
+         bill = bill + 1500;
+     }
+     if(lifeSkills.checked == 1){
+         coursesCount = coursesCount + 1;
+         bill = bill + 1500;
+     }
+     if(sewing.checked == 1){
+         coursesCount = coursesCount + 1;
+         bill = bill + 1500;
+     }
+     else if(coursesCount == 0){
+         alert("Please Select A Course");
+     }
+    var myDiscount = 0;
+
+     if(coursesCount == 2){
+         myDiscount = 0.05;
+     }
+     else if(coursesCount == 3){
+         myDiscount = 0.10;
+     }
+     else if(coursesCount > 3){
+         myDiscount = 0.15;
+     } 
+
+    var discountApplied = bill * myDiscount;
+    var totalAD = bill - discountApplied;
+    var vat = bill * 0.15
+
+    document.getElementById("billDisplay").innerHTML = "R" + bill;
+    document.getElementById("discountDisplay").innerHTML = "R" + discountApplied;
+    document.getElementById("totalDisplay").innerHTML = "R" + totalAD;
+    document.getElementById("vatDisplay").innerHTML = "R" + vat;
+};
+                    
+
+function validateForm(){
+
+    var validateName = document.getElementById("yourName").value;
+    if(validateName == "No Nicknames Please" || validateName == ""){
+        alert("Please Enter Your Name");
+    }
+
+    var validateEmail = document.getElementById("yourEmail").value;
+    if(validateEmail.includes("@") && validateEmail.includes(".")){
+
+    }
+    else{
+        alert("Not a valid email format");
+    }
+
+    var validateAge = document.getElementById("yourAge").value;
+    if(validateAge < 16){
+        alert("You are not over 16. You will need parental consent to book a service");
+    }
+
+    var validateCell = document.getElementById("yourCell").value;
+    if(validateCell.includes(" ") && validateCell.incluseds("-")){
+
+    }
+    else{
+        alert("This is not a valid Cell Number")
+    }
+
+}
+</script>
 </html>
