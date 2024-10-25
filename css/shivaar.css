@@ -1,5 +1,4 @@
- /* General Reset */
- * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,7 +13,7 @@ body {
   background-color: #1e1e1f;
   color: #ffffff;
   min-height: 100vh;
-  padding-top: 60px; /* Add padding to avoid overlap with menu */
+  padding-top: 60px; 
 }
 
 /* Hamburger Menu */
