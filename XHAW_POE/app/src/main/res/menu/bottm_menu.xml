@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/six_week"
+        android:icon="@drawable/six_week"
+        android:title="6 Week" />
+    <item
+        android:id="@+id/six_month"
+        android:icon="@drawable/six_month"
+        android:title="6 Month" />
+    <item
+        android:id="@+id/Cart"
+        android:icon="@drawable/shopping_cart"
+        android:title="Cart" />
+    <item
+        android:id="@+id/contact_infomation"
+        android:icon="@drawable/contact_support_20dp_000000_fill0_wght400_grad0_opsz20"
+        android:title="Contact Info" />
+    <item
+        android:id="@+id/log_out"
+        android:icon="@drawable/logout"
+        android:title="Log Out" />
+</menu>

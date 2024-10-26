@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">XHAW_POE</string>
+
+    <string name="Six_week1">Click for more details</string>
+    <string name="week_details1">Purpose: To provide basic child and baby care \n Content: \n • birth to six-month old baby needs \n • seven-month to one year old needs \n • Toddler needs \n • Educational toys</string>
+
+    <string name="Six_week2">Click for more details</string>
+    <string name="week_details2">Purpose: To prepare and cook nutritious family meals \n Content: \n Nutritional requirements for a healthy body \n • Types of protein, carbohydrates and vegetables \n • Planning meals \n • Preparation and cooking of meals</string>
+
+    <string name="Six_week3">Click for more details</string>
+    <string name="week_details3">Purpose: To provide basic knowledge of watering, pruning and planting in a domestic garden. \n Content: \n • Water restrictions and the watering requirements of indigenous and exotic plants \n • Pruning and propagation of plants \n • Planting techniques for different plant types</string>
+
+    <string name="comimg_soon">Comimg Soon...</string>
+
+
+    <string name="Six_month1">Click for more details</string>
+    <string name="month_details1">Purpose: To provide first aid awareness and basic life support \n Content: \n • Wounds and bleeding \n • Burns and fractures \n • Emergency scene management \n • Cardio-Pulmonary Resuscitation (CPR) \n • Respiratory distress e.g., Choking, blocked airway</string>
+
+
+    <string name="Six_month2">Click for more details</string>
+    <string name="month_details2">Purpose: To provide alterations and new garment tailoring services \n Content: \n • Types of stitches \n • Threading a sewing machine \n • Sewing buttons, zips, hems and seams \n • Alterations \n • Designing and sewing new garments</string>
+
+
+    <string name="Six_month3">Click for more details</string>
+    <string name="month_details3">Purpose: To provide landscaping services for new and established gardens \n  Content: \n • Indigenous and exotic plants and trees \n • Fixed structures (fountains, statues, benches, tables, built-in braai) \n • Balancing of plants and trees in a garden \n • Aesthetics of plant shapes and colours \n • Garden layout</string>
+
+
+    <string name="Six_month4">Click for more details</string>
+    <string name="month_details4">Purpose: To provide skills to navigate basic life necessities \n Content: \n • Opening a bank account \n • Basic labour law (know your rights) \n • Basic reading and writing literacy \n • Basic numeric literacy</string>
+    <string name="get_started">Get Started</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="are_you_sure_you_want_to_exit">Are you sure you want to exit?</string>
+
+    <string-array name="months_array">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string-array name="years_array">
+        <item>2024</item>
+        <item>2025</item>
+        <item>2026</item>
+        <item>2027</item>
+        <item>2028</item>
+        <item>2029</item>
+        <item>2030</item>
+        <item>2031</item>
+        <item>2032</item>
+        <item>2033</item>
+        <item>2034</item>
+    </string-array>
+
+
+</resources>
