@@ -1,12 +1,12 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     font-family: poppins;
     box-sizing: border-box;
 }
 body{
-    background: #1e1f21;
-    color: #fff;
+    background: lightblue;
+    color: cyan;
 }
 .wrapper{
     padding: 10px 10%;
@@ -16,15 +16,16 @@ body{
 }
 .box-area{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
-    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    grid-gap: 30px;
     margin-top: 50px;
+    
 }
 .box{
-    border-radius: 90px;
+    border-radius: 10px;
     position: relative;
     overflow: hidden;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5 );
 }
 .box img{
     width: 100%;
@@ -33,40 +34,43 @@ body{
     transition: transform 0.5s;
 }
 .overlay{
-    height: 20%;
+    height: 0;
     width: 100%;
-    background: linear-gradient(transparent,#1c1c1c 58%);
-    border-radius: 10px;
-    position: relative;
+    background: linear-gradient(transparent,rgb(72, 72, 77) 58%);
+    border-radius: 5px;
+    position: absolute;
     left: 0;
     bottom: 0;
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:center ;
     flex-direction: column;
     padding: 0 40px;
     text-align: center;
-    font-size: 14px;
+    font-size: 11px;
     transition: height 0.5s;
 }
 .overlay h3{
     font-weight: 500;
-    margin-bottom: -5px;
+    margin-bottom: 5px;
     margin-top: 80%;
-    font-family: bebas neue;
-    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
     letter-spacing: 2px;
+    
 }
 .overlay a{
     margin-top: 10px;
-    color: #262626;
+    color: rgb(26, 188, 241);
     text-decoration: none;
     font-size: 14px;
     background: #fff;
     border-radius: 50px;
     text-align: center;
     padding: 5px 15px;
+
+
 }
 .boxLhover img{
     transform: scale(1.2);
