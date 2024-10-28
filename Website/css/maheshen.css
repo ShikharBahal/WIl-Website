@@ -1,80 +1,146 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: poppins;
     box-sizing: border-box;
-}
-body{
-    background: lightblue;
-    color: cyan;
-}
-.wrapper{
-    padding: 10px 10%;
-}
-#card-area{
-    padding: 50px 0;
-}
-.box-area{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-    grid-gap: 30px;
-    margin-top: 50px;
-    
-}
-.box{
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.5 );
-}
-.box img{
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-    transition: transform 0.5s;
-}
-.overlay{
-    height: 0;
-    width: 100%;
-    background: linear-gradient(transparent,rgb(72, 72, 77) 58%);
-    border-radius: 5px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Body and Layout */
+  body {
     display: flex;
-    align-items: center;
-    justify-content:center ;
     flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 11px;
-    transition: height 0.5s;
-}
-.overlay h3{
-    font-weight: 500;
-    margin-bottom: 5px;
-    margin-top: 80%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    letter-spacing: 2px;
-    
-}
-.overlay a{
-    margin-top: 10px;
-    color: rgb(26, 188, 241);
+    align-items: center;
+    background-color: #1e1e1f;
+    color: #ffffff;
+    min-height: 100vh;
+    padding-top: 60px; 
+  }
+  
+  /* Hamburger Menu */
+  nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+  }
+  
+  #menuToggle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    cursor: pointer;
+  }
+  
+  #menuToggle input {
+    display: none;
+  }
+  
+  #menuToggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+  
+  #menu {
+    display: none;
+    list-style: none;
+    padding: 20px;
+    background-color: #333;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    border-radius: 8px;
+  }
+  
+  #menuToggle input:checked ~ #menu {
+    display: block;
+  }
+  
+  #menu a {
     text-decoration: none;
-    font-size: 14px;
-    background: #fff;
-    border-radius: 50px;
-    text-align: center;
-    padding: 5px 15px;
-
-
-}
-.boxLhover img{
-    transform: scale(1.2);
-}
-.box:hover .overlay{
+    color: #fff;
+  }
+  
+  #menu li {
+    padding: 10px 0;
+    font-size: 1em;
+  }
+  
+  #card-area {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .box-area {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .box {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .box:hover {
+    transform: scale(1.05);
+  }
+  
+  .box img {
+    width: 100%;
     height: 100%;
-}
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    padding: 20px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .box:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlay h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .overlay p {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  footer {
+    margin-top: 300px;
+    text-align: center;
+  }
