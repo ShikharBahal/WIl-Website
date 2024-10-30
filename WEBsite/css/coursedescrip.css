@@ -182,5 +182,40 @@ button:hover {
     transform: scale(1.5); /* Slightly enlarges icon on hover */
     filter: brightness(1.3); /* Brightens the icon */
 }
+#courseImage {
+    position: relative;
+    display: inline-block;
+}
+
+#courseImage::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 4px solid transparent;
+    border-radius: 10px; /* Optional, for rounded corners */
+    animation: borderAnimation 6s linear infinite;
+    z-index: -1;
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: #ff6f61;
+    }
+    25% {
+        border-color: #ffbf47;
+    }
+    50% {
+        border-color: #72c3dc;
+    }
+    75% {
+        border-color: #9c6ade;
+    }
+    100% {
+        border-color: #ff6f61;
+    }
+}
 
 
