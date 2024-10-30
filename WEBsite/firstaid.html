@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/coursedescrip.css">
+    <script src="Java/coursedescrip.js" defer></script>
+    <title>Course Details</title>
+</head>
+<body>
+    <!-- Back Button -->
+    <a href="courses.html" id="backButton">
+        <img src="Img/Back button.png" alt="Back" id="backIcon"> 
+    </a>
+
+    <!-- Cart Icon on Top Right -->
+    <a href="cart.html" id="topCartIcon">
+        <img src="Img/Shopping_Cart.png" alt="Cart Icon" id="topCartImg">
+    </a>
+
+    <center>
+    
+    <div id="courseContainer">
+        <div id="courseImage">
+            <img src="Img/First Aid1.png" alt="Course Image" id="courseImg"> <!-- Change to your course image -->
+        </div>
+        <div id="courseInfo">
+            <h2 id="courseName">First Aid</h2> <!-- Course name will be dynamically added here -->
+            <p id="coursePrice">R1500.00</p> <!-- Course price will be dynamically added here -->
+            <button id="addToCart" onclick="addToCart()">Add to Cart</button>
+            <button id="buyNow">Buy Now</button>
+           
+        </div>
+    </div>
+    </center>
+    
+    <div id="moreInfo">
+        <button id="toggleInfo">More Information</button>
+        <div id="infoContent" style="display: none;">
+            <div>
+                <h2>Fees: R1500</h2>
+                <h3>Purpose:</h3>
+                <p>To provide first aid awareness and basic life support.</p>
+                <h3>Content:</h3>
+                <ul>
+                    <li>Wounds and bleeding</li>
+                    <li>Burns and fractures</li>
+                    <li>Emergency scene management</li>
+                    <li>Cardio-Pulmonary Resuscitation (CPR)</li>
+                    <li>Respiratory distress (e.g., choking, blocked airway)</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+
+
+<script>
+    // Toggle "More Information" section
+    document.getElementById("toggleInfo").addEventListener("click", function() {
+        const infoContent = document.getElementById("infoContent");
+        if (infoContent.style.display === "none" || infoContent.style.display === "") {
+            infoContent.style.display = "block";
+        } else {
+            infoContent.style.display = "none";
+        }
+    });
+
+    function addToCart() {
+        const item = {
+            name: document.getElementById("courseName").textContent,
+            price: parseFloat(document.getElementById("coursePrice").textContent.replace("R", "")),
+            image: document.getElementById("courseImg").src
+        };
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push(item);
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        alert("Item added to cart!");
+    }
+
+    function buyNow() {
+        const item = {
+            name: document.getElementById("courseName").textContent,
+            price: parseFloat(document.getElementById("coursePrice").textContent.replace("R", "")),
+            image: document.getElementById("courseImg").src
+        };
+
+        localStorage.setItem("currentPurchase", JSON.stringify(item));
+        window.location.href = "payment.html";
+    }
+</script>
+</body>
+</html>

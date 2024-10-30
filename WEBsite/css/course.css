@@ -1,0 +1,107 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styling */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+/* Cart Icon Styling */
+#cartIcon {
+    margin-left: auto; /* This pushes the cart icon to the right */
+    margin-right: 1rem; /* Add some space to the right */
+}
+
+#cartIcon img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for effects */
+}
+
+#cartIcon:hover img {
+    transform: scale(1.5); /* Increased the scale to 1.5 for a more pronounced effect */
+    opacity: 0.8;          /* Optional: make it slightly transparent on hover */
+}
+
+/* Main Container Styling */
+#mainContainer {
+    padding: 2rem;
+}
+
+/* Top Section Styling */
+#topSection {
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+#logo {
+    width: 200px;
+    height: 200px;
+    margin-right: 1rem;
+}
+
+
+
+/* Dropdown Section Styling */
+#dropdownSection {
+    margin-bottom: 1.5rem;
+    display: flex;           /* Use Flexbox for inline display */
+    align-items: center; 
+    padding-left: 3px;
+}
+
+/* Search Bar Styling */
+#searchBar {
+    width: 30%;              /* Adjust width as needed */
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    outline: none;
+    margin-left: 560px;      /* Space between dropdown and search bar */
+}
+
+#programDropdown {
+    width: 25%;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+/* Image Gallery Styling */
+#imageGallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#imageGallery img {
+    width: calc(25% - 1rem);  /* Adjusted for smaller images */
+    height: auto;              
+    object-fit: contain;       
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#imageGallery img:hover {
+    transform: scale(1.05);
+}
+

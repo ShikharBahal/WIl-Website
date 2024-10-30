@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/course.css">
+    <script src="Java/script.js" defer></script>
+    <title>Responsive Hamburger Menu with Cart</title>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav id="navbar">
+        <!-- Hamburger menu -->
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <ul id="menu">
+                <a href="courses.html"><li>Courses</li></a>
+                <a href="cart.html"><li>Cart</li></a>
+                <a href="contact.html"><li>Contact</li></a>
+            </ul>
+        </div>
+        <!-- Cart icon -->
+        <a href="cart.html" id="cartIcon">
+            <img src="Img/Shopping_Cart.png" alt="Cart">
+        </a>
+    </nav>
+    
+    <!-- Main container for the layout -->
+    <div id="mainContainer">
+        <!-- Top section with logo and description -->
+        <section id="topSection">
+            <img src="Img/logo.png" alt="Company Logo" id="logo">
+            <div>
+                <center>
+                    <h1 style="color: green;">EMPOWERING THE NATION</h1>
+                    <h2 style="color: blue;">Take your domestic skills to another level</h2>
+                </center>
+                <p style="color: black">Empowering the Nation is a local initiative founded by Precious Radebe to uplift domestic workers and gardeners by providing essential skills training to help them advance professionally. This training school offers specialized programs that equip individuals with a wide range of skills, from first aid and cooking to child minding and garden maintenance. Motivated by her own family’s limited access to formal education and upskilling, Precious established Empowering the Nation to create new opportunities for her community. Through these programs, domestic workers and gardeners can earn higher wages, enhance their employability, or even start their own businesses. Empowering the Nation not only aims to strengthen individual skills but also to support community growth and economic empowerment.</p>
+            </div>
+            
+        </section>
+        
+        <!-- Dropdown section -->
+         
+        
+<section id="dropdownSection">
+    <select id="programDropdown" onchange="updateImages()">
+        <option value="all">All</option>
+        <option value="6week">6 Week Program</option>
+        <option value="6month">6 Month Program</option>
+    </select>
+    <input type="text" id="searchBar" placeholder="Search courses..." oninput="filterImages()">
+</section>
+
+        
+
+        <!-- Image gallery section -->
+        <section id="imageGallery"></section>
+    </div>
+</body>
+</html>

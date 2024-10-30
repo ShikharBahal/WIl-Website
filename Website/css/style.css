@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: #232323;
+    background: #4c4d4c;
     color:  #4c4d4c;
     font-family: "Avenir Next", "Avenir", sans-serif;
     overflow-x: hidden;
@@ -20,15 +20,25 @@ body {
     transition: opacity 0.5s ease;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between; /* Adjusts spacing between items */
+    align-items: center; /* Centers items vertically */
+    padding: 10px; /* Add padding if needed */
+    position: relative; /* Needed for absolute positioning of child elements */
+}
+
+
 #menuToggle {
     display: block;
-    position: relative;
-    top: 50px;
-    left: 50px;
+    position: absolute; /* Changed to absolute for better positioning */
+    top: 20px; /* Adjust as needed for vertical positioning */
+    left: 20px; /* Adjust this to center or position it as desired */
     z-index: 10;
     -webkit-user-select: none;
     user-select: none;
 }
+
 
 #menuToggle input {
     display: block;
@@ -48,7 +58,7 @@ body {
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    background: #cdcdcd;
+    background: #ffffff;
     border-radius: 3px;
     z-index: 1;
     transform-origin: 4px 0px;
@@ -146,3 +156,101 @@ body {
     opacity: 1;
     pointer-events: auto;
 }
+
+#cartActions button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff5722;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+/* Button Hover Effect */
+#cartActions button:hover {
+    background-color: #e64a19;
+}
+
+/* Button Focus Style */
+#cartActions button:focus {
+    outline: 3px solid #ffccbc;
+}
+
+/* Specific button colors */
+#clearCartButton {
+    background-color: #ff7043;
+}
+
+#payNowButton {
+    background-color: #ffa726;
+}
+
+/* Pay Now Button Hover Effect */
+#payNowButton:hover {
+    background-color: #ff8a65;
+}
+
+/* Cart Container Styling */
+#cartContainer {
+    padding: 2rem;
+    color: #fff;
+    background: #333;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.cart-item-image {
+    width: 60px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.cart-item-details {
+    margin-left: 1rem;
+}
+
+.cart-item-name {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.cart-item-price {
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+#cartTotal {
+    font-size: 1.2rem; /* Adjust as needed for size */
+    
+    color: #ddd; /* Same color as discount for consistency */
+    margin-top: 2rem;
+}
+
+/* Final amount styling */
+#finalAmount {
+    font-size: 1.5rem; /* Make it bigger */
+    font-weight: bold; /* Make it bold */
+    color: #48ff00; /* A distinct color for emphasis */
+    margin-top: 1rem;
+}
+
+.cart-count {
+    background-color: #ff5722;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+

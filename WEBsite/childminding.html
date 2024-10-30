@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/coursedescrip.css">
+    <script src="Java/coursedescrip.js" defer></script>
+    <title>Course Details</title>
+</head>
+<body>
+    <!-- Back Button -->
+    <a href="courses.html" id="backButton">
+        <img src="Img/Back button.png" alt="Back" id="backIcon"> 
+    </a>
+
+    <!-- Cart Icon on Top Right -->
+    <a href="cart.html" id="topCartIcon">
+        <img src="Img/Shopping_Cart.png" alt="Cart Icon" id="topCartImg">
+    </a>
+
+    <center>
+        <div id="courseContainer">
+            <div id="courseImage">
+                <img src="Img/Child Minding1.jpg" alt="Course Image" id="courseImg">
+            </div>
+            <div id="courseInfo">
+                <h2 id="courseName">Child Minding</h2>
+                <p id="coursePrice">R750.00</p>
+                <button id="addToCart" onclick="addToCart()">Add to Cart</button>
+                <button id="buyNow">Buy Now</button>
+            </div>
+        </div>
+    </center>
+
+    <div id="moreInfo">
+        <button id="toggleInfo">More Information</button>
+        <div id="infoContent" style="display: none;">
+            <div>
+                <h2>Fees: R750</h2>
+                <h3>Purpose:</h3>
+                <p>To provide basic child and baby care</p>
+                <h3>Content:</h3>
+                <ul>
+                    <li>Birth to six-month-old baby needs</li>
+                    <li>Seven-month to one-year-old needs</li>
+                    <li>Toddler needs</li>
+                    <li>Educational toys</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
