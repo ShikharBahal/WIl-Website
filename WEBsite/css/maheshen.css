@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Body and Layout */
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e1e1f;
+    color: #ffffff;
+    min-height: 100vh;
+    padding-top: 60px; 
+  }
+  
+  /* Hamburger Menu */
+  nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+  }
+  
+  #menuToggle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    cursor: pointer;
+  }
+  
+  #menuToggle input {
+    display: none;
+  }
+  
+  #menuToggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+  
+  #menu {
+    display: none;
+    list-style: none;
+    padding: 20px;
+    background-color: #333;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    border-radius: 8px;
+  }
+  
+  #menuToggle input:checked ~ #menu {
+    display: block;
+  }
+  
+  #menu a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  #menu li {
+    padding: 10px 0;
+    font-size: 1em;
+  }
+  
+  #card-area {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .box-area {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .box {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .box:hover {
+    transform: scale(1.05);
+  }
+  
+  .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    padding: 20px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .box:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlay h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .overlay p {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  footer {
+    margin-top: 300px;
+    text-align: center;
+  }
