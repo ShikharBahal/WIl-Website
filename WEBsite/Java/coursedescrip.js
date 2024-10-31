@@ -10,4 +10,7 @@ function addToCart() {
     localStorage.setItem("cart", JSON.stringify(cart));
 
     alert("Item added to cart!");
+
+    
+    
 }

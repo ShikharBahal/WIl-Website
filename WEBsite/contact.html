@@ -3,61 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Contact Information</title>
     <link rel="stylesheet" href="css/contact.css">
-    <script src="js/contact.js" defer></script>
-    <title>Contact Us</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
 </head>
 <body>
-    <nav role="navigation">
-        <div id="menuToggle">
-            <input type="checkbox" />
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <ul id="menu">
-                <a href="courses.html"><li>Courses</li></a>
-                <a href="cart.html"><li>Cart</li></a>
-                <a href="contact.html"><li>Contact</li></a>
-            </ul>
-        </div>
-    </nav>
-
     <div class="container">
-        <h1>Contact Us</h1>
-        <div class="contact-info">
-            <h2>Get in Touch</h2>
-            <p>If you have any questions, feel free to reach out to us. We’re here to help!</p>
-            <div class="info-item">
-                <h3>Email</h3>
-                <p><a href="mailto:info@example.com">info@example.com</a></p>
-            </div>
-            <div class="info-item">
-                <h3>Phone</h3>
-                <p><a href="tel:+1234567890">+123 456 7890</a></p>
-            </div>
-            <div class="info-item">
-                <h3>Address</h3>
-                <p>123 Main Street,<br>City, Country, ZIP</p>
-            </div>
+        <h1>Contact Information</h1>
+        <div class="icon-grid">
+            <a href="https://www.instagram.com/yourprofile" target="_blank">
+                <img src="Img/instagram.jpg" alt="Instagram" class="icon">
+            </a>
+            <a href="https://www.facebook.com/yourprofile" target="_blank">
+                <img src="Img/facebook.jpg" alt="Facebook" class="icon">
+            </a>
+            <a href="https://wa.me/yourwhatsappnumber" target="_blank">
+                <img src="Img/WhatsApp.png" alt="WhatsApp" class="icon">
+            </a>
+            <a href="https://github.com/ShikharBahal/Online_EDU_App.git" target="_blank">
+                <img src="Img/github.png" alt="GitHub" class="icon">
+            </a>
+            <a href="https://x.com/yourprofile" target="_blank">
+                <img src="Img/X.png" alt="X" class="icon">
+            </a>
+            <a href="#" id="emailLink">
+                <img src="Img/mail.png" alt="Email" class="icon">
+            </a>
         </div>
-
-        <div class="form-container">
-            <h2>Contact Form</h2>
-            <form id="contactForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
-            <div id="responseMessage" class="hidden"></div>
-        </div>
+        
+        <form id="emailForm" class="email-form">
+            <input type="email" id="emailInput" placeholder="Enter your email" required>
+            <button type="submit">Send Email</button>
+            <p id="errorMessage" class="error-message"></p>
+        </form>
+        
+        <!-- Google Map will be displayed here -->
+        <div id="map" class="map"></div>
+        
+        <a href="https://g.co/kgs/84sKm7P" target="_blank">8 Peter Rd, Ruimsig, Roodepoort, 1725</a>
     </div>
+
+    <script src="Java/contact.js"></script>
 </body>
 </html>

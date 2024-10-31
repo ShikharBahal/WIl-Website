@@ -18,7 +18,6 @@
         <img src="Img/Shopping_Cart.png" alt="Cart Icon" id="topCartImg">
     </a>
 
-
     <center>
     <div id="courseContainer">
         <div id="courseImage">
@@ -27,7 +26,22 @@
         <div id="courseInfo">
             <h2 id="courseName">Cooking</h2> 
             <p id="coursePrice">R750.00</p> 
-            <button id="addToCart" onclick="addToCart()">Add to Cart</button>
+            <!-- Updated Add to Cart Button -->
+            <button class="button" onclick="addToCart()">
+                <span>Add to cart</span>
+                <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+                    <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <g id="cart">
+                            <circle r="1.91" cy="20.59" cx="10.07" class="cls-1"></circle>
+                            <circle r="1.91" cy="20.59" cx="18.66" class="cls-1"></circle>
+                            <path d="M.52,1.5H3.18a2.87,2.87,0,0,1,2.74,2L9.11,13.91H8.64A2.39,2.39,0,0,0,6.25,16.3h0a2.39,2.39,0,0,0,2.39,2.38h10" class="cls-1"></path>
+                            <polyline points="7.21 5.32 22.48 5.32 22.48 7.23 20.57 13.91 9.11 13.91" class="cls-1"></polyline>
+                        </g>
+                    </g>
+                </svg>
+            </button>
             <button id="buyNow" onclick="buyNow()">Buy Now</button> <!-- Updated button -->
         </div>
     </div>
@@ -48,7 +62,6 @@
                     <li>Preparation and cooking of meals</li>
                 </ul>
             </div>
-            
         </div>
     </div>
 
@@ -62,32 +75,45 @@
                 infoContent.style.display = "none";
             }
         });
-    
+
         function addToCart() {
             const item = {
                 name: document.getElementById("courseName").textContent,
                 price: parseFloat(document.getElementById("coursePrice").textContent.replace("R", "")),
                 image: document.getElementById("courseImg").src
             };
-    
+
             let cart = JSON.parse(localStorage.getItem("cart")) || [];
             cart.push(item);
             localStorage.setItem("cart", JSON.stringify(cart));
-    
+
             alert("Item added to cart!");
         }
-    
+
         function buyNow() {
             const item = {
                 name: document.getElementById("courseName").textContent,
                 price: parseFloat(document.getElementById("coursePrice").textContent.replace("R", "")),
                 image: document.getElementById("courseImg").src
             };
-    
+
             localStorage.setItem("currentPurchase", JSON.stringify(item));
             window.location.href = "payment.html";
         }
+
+        function buyNow() {
+    const item = {
+        name: document.getElementById("courseName").textContent,
+        price: parseFloat(document.getElementById("coursePrice").textContent.replace("R", "")),
+        image: document.getElementById("courseImg").src
+    };
+
+    // Store the current purchase and the final amount in local storage
+    localStorage.setItem("currentPurchase", JSON.stringify(item));
+    localStorage.setItem("finalAmount", item.price); // Save the final amount
+    window.location.href = "payment.html";
+}
+
     </script>
-    
 </body>
 </html>

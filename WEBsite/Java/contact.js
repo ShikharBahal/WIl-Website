@@ -1,18 +1,35 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from submitting normally
+// Initialize Google Map
+function initMap() {
+    const location = { lat: -26.1031, lng: 27.8924 }; // Replace with actual latitude and longitude
+    const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: location,
+    });
+    const marker = new google.maps.Marker({
+        position: location,
+        map: map,
+    });
+}
 
-    // Get form data
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+// Load the map
+window.onload = initMap;
 
-    // Simulate sending the data (you would usually send this to your server)
-    console.log('Form submitted:', { name, email, message });
+document.getElementById('emailForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
 
-    // Show response message
-    const responseMessage = document.getElementById('responseMessage');
-    responseMessage.classList.remove('hidden');
-    responseMessage.innerText = 'Thank you for contacting us, ' + name + '! We will get back to you shortly.';
-    responseMessage.style.backgroundColor = '#dff0d8';
-    responseMessage.style.color = '#3c763d';
+    const emailInput = document.getElementById('emailInput');
+    const errorMessage = document.getElementById('errorMessage');
+    const emailValue = emailInput.value;
+
+    // Simple email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    if (!emailPattern.test(emailValue)) {
+        errorMessage.textContent = 'Please enter a valid email address.';
+        errorMessage.style.display = 'block';
+    } else {
+        errorMessage.style.display = 'none';
+        alert('Email sent to: ' + emailValue); // Simulate sending email
+        emailInput.value = ''; // Clear input after submission
+    }
 });

@@ -61,20 +61,96 @@ body {
 }
 
 /* Buttons Styling */
-button {
-    padding: 1rem 2rem; /* Increased size */
-    margin-right: 1rem;
-    background-color: #333; /* Change to desired color */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1.2rem; /* Increased font size for better visibility */
+
+.button {
+    height: 60px;
+    width: 200px;
+    background-color: #132233;
+    border: 2px solid rgb(182, 128, 128);
+    color: #eee;
+    transition: .6s;
+    font-size: 15px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-button:hover {
-    background-color: #555; /* Darken color on hover */
+.button span {
+    transform: translateX(10px);
+    transition: .5s;
 }
+
+.button svg {
+    transform: translateX(-300px);
+    transition: .6s;
+    z-index: 3;
+    height: 20px;
+}
+
+.button:hover {
+    width: 60px;
+    background-color: rgba(51, 34, 51, 0.815);
+    box-shadow: 20px 20px 96px #bebebe,-20px -20px 96px #ffffff;
+}
+
+.button:hover svg {
+    transform: translateX(-5px);
+}
+
+.button:hover span {
+    transform: translateY(70px);
+    font-size: .1rem;
+}
+
+/* Existing Button Styles for "Add to Cart" */
+.addToCartButton {
+    height: 60px;
+    width: 200px;
+    background-color: #132233;
+    border: 2px solid rgb(182, 128, 128);
+    color: #eee;
+    transition: .6s;
+    font-size: 15px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.addToCartButton:hover {
+    /* Add any specific hover effects for the Add to Cart button here */
+    box-shadow: 20px 20px 96px #bebebe, -20px -20px 96px #ffffff;
+}
+
+/* Buy Now Button Styling */
+#buyNow {
+    padding: 1rem 2rem; /* Adjusted padding */
+    background: linear-gradient(90deg, #03a9f4, #41f45f);
+    color: white;
+    border: none;
+    border-radius: 0.25rem; /* Adjusted border radius */
+    cursor: pointer;
+    font-size: 1.2rem; /* Font size remains the same */
+    box-shadow: 0 0 1rem 0.15rem rgba(3, 169, 244, 0.5), 
+                0 0 1.5rem 0.3rem rgba(65, 193, 244, 0.5); /* Multi-color shadow */
+    transition: box-shadow 0.5s ease; /* Smooth shadow transition */
+}
+
+#buyNow:hover {
+    box-shadow: 0 0 1.5rem 0.25rem rgba(245, 195, 32, 0.7), 
+                0 0 2.5rem 0.5rem rgba(3, 169, 244, 0.7),
+                0 0 3.5rem 0.75rem rgba(0, 0, 0, 0.5); /* Brighter multi-color shadow on hover */
+}
+
+#buyNow:active {
+    box-shadow: 0 0 1rem 0.15rem rgba(236, 162, 23, 0.7); /* Slightly reduced shadow on click */
+}
+
+
+
 
 /* More Information Section */
 #moreInfo {
@@ -199,6 +275,50 @@ button:hover {
     animation: borderAnimation 6s linear infinite;
     z-index: -1;
 }
+
+/* Buy Now Button Styling */
+#buyNow {
+    padding: 1rem 2rem; /* Adjusted padding */
+    background: linear-gradient(90deg, #03a9f4, #41f45f);
+    color: white;
+    border: none;
+    border-radius: 0.25rem; /* Adjusted border radius */
+    cursor: pointer;
+    font-size: 1.2rem; /* Font size remains the same */
+    box-shadow: 0 0 1rem 0.15rem rgba(3, 169, 244, 0.5), 
+                0 0 1.5rem 0.3rem rgba(65, 193, 244, 0.5); /* Multi-color shadow */
+    transition: box-shadow 0.5s ease; /* Smooth shadow transition */
+}
+
+#buyNow:hover {
+    box-shadow: 0 0 1.5rem 0.25rem rgba(245, 195, 32, 0.7), 
+                0 0 2.5rem 0.5rem rgba(3, 169, 244, 0.7),
+                0 0 3.5rem 0.75rem rgba(0, 0, 0, 0.5); /* Brighter multi-color shadow on hover */
+}
+
+#buyNow:active {
+    box-shadow: 0 0 1rem 0.15rem rgba(236, 162, 23, 0.7); /* Slightly reduced shadow on click */
+}
+
+/* Button Container Styling */
+#buttonContainer {
+    display: flex;
+    justify-content: space-between; /* Aligns buttons next to each other */
+    padding: 1rem 0; /* Adds vertical padding */
+}
+
+/* Adjust the padding for buttons */
+.addToCartButton,
+#buyNow {
+    margin-right: 1rem; /* Adds space between the buttons */
+}
+
+/* Remove margin for the last button */
+#buyNow {
+    margin-right: 0; /* Removes margin for the last button */
+}
+
+
 
 @keyframes borderAnimation {
     0% {

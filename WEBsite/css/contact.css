@@ -1,76 +1,79 @@
 body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    font-family: "Avenir Next", "Avenir", sans-serif;
-    overflow-x: hidden;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 600px;
     margin: 50px auto;
     padding: 20px;
     background: white;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
+h1 {
     text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-.contact-info {
-    margin-bottom: 40px;
-}
-
-.info-item {
+.icon-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 20px 0;
 }
 
-.info-item h3 {
-    margin: 10px 0 5px;
+.icon {
+    width: 50px; /* Fixed size for icons */
+    height: 50px; /* Fixed size for icons */
+    margin: 10px;
+    transition: transform 0.3s;
 }
 
-form {
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.email-form {
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
 }
 
-label {
-    margin-bottom: 5px;
-}
-
-input, textarea {
+.email-form input {
     padding: 10px;
-    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    margin-bottom: 10px;
 }
 
-button {
+.email-form button {
     padding: 10px;
-    background-color: #ff5722;
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #e64a19;
+.email-form button:hover {
+    background-color: #0056b3;
 }
 
-#responseMessage {
-    margin-top: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    display: none; /* Hide initially */
-}
-
-.hidden {
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
     display: none;
+}
+
+.map {
+    height: 300px; /* Set height for the map */
+    margin-top: 20px;
+    border-radius: 5px;
+    overflow: hidden;
 }

@@ -29,5 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (finalAmount) {
         finalInvoiceAmount.textContent = `Final Amount: R${finalAmount}`;
+    } else {
+        finalInvoiceAmount.textContent = `Final Amount: R0.00`; // Default if no amount is found
     }
 });
