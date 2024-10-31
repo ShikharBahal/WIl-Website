@@ -310,7 +310,7 @@ body {
 /* Adjust the padding for buttons */
 .addToCartButton,
 #buyNow {
-    margin-right: 1rem; /* Adds space between the buttons */
+    margin-top: 2rem; /* Adds space between the buttons */
 }
 
 /* Remove margin for the last button */

@@ -5,44 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Information</title>
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
 </head>
 <body>
+
+    <div id="menuToggle">
+        <input type="checkbox" />
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <ul id="menu">
+            <a href="courses.html"><li>Courses</li></a>
+            <a href="cart.html"><li>Cart</li></a>
+            <a href="contact.html"><li>Contact</li></a>
+        </ul>
+    </div>
+
     <div class="container">
         <h1>Contact Information</h1>
         <div class="icon-grid">
-            <a href="https://www.instagram.com/yourprofile" target="_blank">
+            <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fedit%2F%3F__coig_login%3D1#" target="_blank">
                 <img src="Img/instagram.jpg" alt="Instagram" class="icon">
             </a>
-            <a href="https://www.facebook.com/yourprofile" target="_blank">
-                <img src="Img/facebook.jpg" alt="Facebook" class="icon">
+            <a href="https://www.facebook.com/login.php/" target="_blank">
+                <img src="Img/facebook.jpg" alt="Facebook" class="icon" >
             </a>
-            <a href="https://wa.me/yourwhatsappnumber" target="_blank">
+            <a href="https://web.whatsapp.com/" target="_blank">
                 <img src="Img/WhatsApp.png" alt="WhatsApp" class="icon">
             </a>
             <a href="https://github.com/ShikharBahal/Online_EDU_App.git" target="_blank">
                 <img src="Img/github.png" alt="GitHub" class="icon">
             </a>
-            <a href="https://x.com/yourprofile" target="_blank">
+            <a href="https://x.com/login" target="_blank">
                 <img src="Img/X.png" alt="X" class="icon">
-            </a>
-            <a href="#" id="emailLink">
-                <img src="Img/mail.png" alt="Email" class="icon">
             </a>
         </div>
         
+        <!-- Add Notes/Questions Box -->
         <form id="emailForm" class="email-form">
-            <input type="email" id="emailInput" placeholder="Enter your email" required>
-            <button type="submit">Send Email</button>
+            <textarea id="notesInput" placeholder="Add your notes/questions here..." required></textarea>
+            <button type="button" id="sendEmailButton">Send Email</button>
             <p id="errorMessage" class="error-message"></p>
         </form>
         
-        <!-- Google Map will be displayed here -->
-        <div id="map" class="map"></div>
+        <!-- Google Map -->
+        <div id="mapContainer">
+            <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.3450303391505!2d27.8718348!3d-26.0876535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e959ef3f751b397%3A0xda45fa0d208a06ab!2s8%20Peter%20Rd%2C%20Ruimsig%2C%20Roodepoort%2C%201725!5e0!3m2!1sen!2sza!4v1730375311189!5m2!1sen!2sza" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
         
-        <a href="https://g.co/kgs/84sKm7P" target="_blank">8 Peter Rd, Ruimsig, Roodepoort, 1725</a>
-    </div>
-
     <script src="Java/contact.js"></script>
 </body>
 </html>

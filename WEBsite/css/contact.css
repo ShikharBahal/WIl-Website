@@ -77,3 +77,50 @@ h1 {
     border-radius: 5px;
     overflow: hidden;
 }
+
+#mapContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.map-embed {
+    width: 100%;
+    max-width: 600px; /* Set maximum width for larger screens */
+    height: 450px;
+    border: 0;
+    border-radius: 8px; /* Optional: adds rounded corners */
+}
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#notesInput {
+    width: 100%;
+    max-width: 600px;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    font-size: 16px;
+}
+
+#sendEmailButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#sendEmailButton:hover {
+    background-color: #0056b3;
+}
