@@ -5,6 +5,10 @@ body {
     color: #4c4d4c;
     font-family: "Avenir Next", "Avenir", sans-serif;
     overflow-x: hidden;
+    background-image: url('../Img/back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 * {
