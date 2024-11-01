@@ -322,6 +322,18 @@ body {
     margin-right: 0; /* Removes margin for the last button */
 }
 
+.card {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark, semi-transparent background */
+    padding: 1.5rem; /* Padding inside the card */
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid #fff; /* Optional white border for clarity */
+    color: #fff; /* Text color for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+    max-width: 600px; /* Optional: limit width */
+   
+}
+
+
 
 
 @keyframes borderAnimation {
